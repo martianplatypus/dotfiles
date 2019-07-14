@@ -14,3 +14,17 @@ function source_all() {
     source_in $dir;
   done
 }
+
+function init_in() {
+  if [ -d $1 ]; then
+    file=$1/.init
+    [ -r "$file" ] && source "$file"
+  fi
+  unset file
+}
+
+function init_all() {
+  for dir in $1; do
+    init_in $dir;
+  done
+}
