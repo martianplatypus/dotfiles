@@ -1,0 +1,8 @@
+# Loops through a folder and source its files
+function sourceme() {
+  if [ -d $1 ]; then
+    for file in $1/*; do
+      source $file;
+    done
+  fi
+}

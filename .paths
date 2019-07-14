@@ -1,0 +1,6 @@
+# User bin
+export PATH="$HOME/bin:$PATH"
+
+# Brew
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
