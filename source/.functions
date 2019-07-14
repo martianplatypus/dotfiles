@@ -1,8 +1,16 @@
-# Loops through a folder and source its files
-function sourceme() {
+# Loops through a directory and source its files
+function source_in() {
   if [ -d $1 ]; then
-    for file in $1/*; do
-      source $file;
+    for file in $1/.{exports,functions,paths}; do
+      [ -r "$file" ] && source "$file"
     done
+    unset file
   fi
+}
+
+# Loops through all directories in a given directory and source its files
+function source_all() {
+  for dir in $1; do
+    source_in $dir;
+  done
 }
