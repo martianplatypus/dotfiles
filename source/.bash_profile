@@ -4,7 +4,7 @@ for file in ~/.{exports,functions,paths}; do
 done
 unset file
 
-# Load local dotfiles
+# Load sensitive data to your profile like usernames, keys, etc.
 sourceme "$HOME/.__private__"
 
 # Powerline Shell
