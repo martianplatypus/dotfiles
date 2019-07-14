@@ -5,7 +5,7 @@ done
 unset file
 
 # Load local dotfiles
-sourceme "$HOME/__private__"
+sourceme "$HOME/.__private__"
 
 # Powerline Shell
 if hash powerline-shell 2>/dev/null; then
