@@ -7,3 +7,6 @@ export HISTCONTROL=ignoredups
 export HISTIGNORE="ls:cd:history:exit:clear"
 
 shopt -s histappend
+
+#GPG
+export GPG_TTY=`tty`
