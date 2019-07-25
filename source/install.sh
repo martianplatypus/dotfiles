@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-cp -pr ./ "$HOME/dotfiles/"
+if [[ "$PWD" != "$HOME/dotfiles/" ]]; then
+  cp -pr ./ "$HOME/dotfiles/"
+fi
 
 bash_profile="$HOME/.bash_profile"
 
@@ -13,4 +15,5 @@ fi
 ln -s ./dotfiles/.bash_profile $bash_profile
 source .bash_profile
 
-printf "Configuration installed succesfully!\n Restart your session...\n"
+printf "\e[32m✔\e[0m dotfiles installed successfully!
+Restart your terminal session...\n"
