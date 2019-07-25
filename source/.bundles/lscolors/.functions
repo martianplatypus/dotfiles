@@ -1,0 +1,6 @@
+function activate_lscolors() {
+  if gdircolors_cmd="$(type -p gdircolors)" && [ ! -z $gdircolors_cmd ] && [ -f "$HOME/.dircolors" ]; then
+    eval $(gdircolors "$HOME/.dircolors")
+    alias ls='gls -F --color'
+  fi
+}
