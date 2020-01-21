@@ -1,7 +1,8 @@
 # Powerline Shell
 
 function activate_ps() {
-  if hash powerline-shell 2>/dev/null; then
+
+  if [ "$(command -v powerline-shell)" ]; then
     function _update_ps1() {
       PS1="$(powerline-shell $?)"
     }
