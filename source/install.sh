@@ -13,14 +13,7 @@ elif [ -L "$bash_profile" ]; then
 fi
 ln -s "$HOME/dotfiles/.bash_profile" $bash_profile
 
-vimrc="$HOME/.vimrc"
-if [ -f "$vimrc" ]; then
-  mv $vimrc "$vimrc.bkp"
-elif [ -L "$bash_profile" ]; then
-  rm -f $vimrc
-fi
-ln -s "$HOME/dotfiles/.vimrc" $vimrc
-
+sh install_vim.sh
 source .bash_profile
 
 printf "\e[32m✔\e[0m dotfiles installed successfully!
