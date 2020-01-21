@@ -14,6 +14,7 @@ fi
 ln -s "$HOME/dotfiles/.bash_profile" $bash_profile
 
 sh install_vim.sh
+sh install_powerline_shell.sh
 source .bash_profile
 
 printf "\e[32m✔\e[0m dotfiles installed successfully!
